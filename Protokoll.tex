@@ -9,6 +9,7 @@
 \usepackage{inputenc}
 \usepackage{graphicx}
 \usepackage{selinput}
+\usepackage{float}
 \SelectInputMappings{
 adieresis={ä},
 germandbls={ß},
@@ -52,37 +53,112 @@ C = \frac{\Delta Q }{n\cdot \Delta T} =\frac{M\cdot \Delta Q}{m\cdot \Delta T} =
 Zur Messung der W\"armekapazitaeten wird ein Kalorimeter verwendet. 
 Bei dieser Apparatur handelt es sich um ein gut isoliertes Gef\"a\ss\ in dem sich eine genau bestimmte Menge Wasser der Temperatur $T_{Kalt}$ befindet. Der zu untersuchende K\"orper wird in einem Wasserbad auf eine Temperatur $T_{Heiss}$ von circa $100 ^\circ C$ erw\"armt. Danach wird dieser in das Wasser des Kalorimeters eingedaucht. Im Folgenden wid das Gef\"a\ss\ mit einem Deckel verschlossen. Die Temperatur des Systems wird mit dem Thermoelment gemssen
 \section{Auswertung}
-Zunächst wurde die Wärmekapazität $c_gm_g$ des Kalorimeters bestimmt. Dazu wurden folgende Messwerte ermittelt:
-\begin{table}[h]
+\subsection{Wärmekapazität des Kalorimeters}
+Um im zweiten Versuchsteil korrekte Wärmekapazitäten für die Metalle zu errechnen, wurde im ersten Versuchsteil die Wärmekapazität $c_gm_g$ des Kalorimeters bestimmt. Dazu wurden folgende Messwerte ermittelt:
+\begin{table}[H]
 \centering
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
- $U_{kalt}[mV]$ &$U_{warm}[mV]$ &$U_{misch}[mV]$\\
+$U_{kalt}[mV]$ &$U_{warm}[mV]$ &$U_{misch}[mV]$ & $T_{kalt}[K]$ & $T_{warm}[K]$ & $T_{misch}[K]$ & $m_{kalt}[Kg]$ & $ m_{warm} [Kg]$ \\
 \hline
-0.85 & 4.10 & 2.06 \\
-0.91 & 4.10 & 2.13 \\
-0.90 & 4.09 & 2.12 \\
-\hline
-\end{tabular}
-\caption{Spannungen - Messwerte}
-\end{table}
-
-
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-$T_{kalt}[K]$ & $T_{warm}[K]$ & $T_{misch}[K]$ & $m_{kalt}[Kg]$ & $ m_{warm} [Kg]$ \\
-\hline
-294.40 & 373.10 & 324.17 & (0.37292$\pm$0.00020) & (0.27308$\pm$0.00014)\\
-295.89 & 373.10 & 325.87 & (0.37441$\pm$0.00020) & (0.27173$\pm$0.00014)\\
-295.64 & 372.86 & 325.63 & (0.37300$\pm$0.00020) & (0.27305$\pm$0.00014)\\
+0.85 & 4.10 & 2.06 & 294.40 & 373.10 & 324.17 & 0.37292 & 0.27308\\
+0.91 & 4.10 & 2.13 & 295.89 & 373.10 & 325.87 & 0.37441 & 0.27173\\
+0.90 & 4.09 & 2.12 & 295.64 & 372.86 & 325.63 & 0.37300 & 0.27305\\
 \hline
 \end{tabular}
 \caption{Wärmekapazität des Kalorimeters - Messwerte}
 \end{table}
+\noindent
+Zunächst ist es erforderlich, die gemessenen Spannungen $U_{kalt}$, $U_{warm}$ und $U_{misch}$ in Temperaturen umzurechnen. Dazu werden die Spannungen in die gegebene Interpolationsformel (Formel (XYZ)) eingesetzt. Die Wärmekapazität $c_gm_g$ des Kalorimeters wird dann durch einsetzen der Messwerte in Formel (XYZ) bestimmt:
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+$c_gm_g$ & 317.36 & 223.83 & 238.42 \\
+\hline
+\end{tabular}
+\caption{Wärmekapazität des Kalorimeters - Ergebnisse}
+\end{table}
+\noindent
+Mit Hilfe der Formel $ \overline{x}=\frac{1}{N}\sum_{i}^N x_i$ wird dann der Mittelwert $\overline{c_gm_g}$ ermittelt:
+\[ \overline{c_gm_g}= (260 \pm 29)\,\frac{J}{K}. \]
+Der Fehler des Mittelwertes wurde mit $\Delta \overline{x}=\sqrt{\frac{1}{N(N-1)}\sum_{i}^N(x_i-\overline{x})^2}$ berechnet.
+\subsection{Wärmekapazität von Metallen}
+Im zweiten Versuchsteil wurden je drei Messungen mit Blei und Aluminium ausgeführt. In der Tabelle (XYZ) sind alle Messergebnisse für die Spannungen sowie die berechneten Temperaturen aufgelistet.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+Metall & $U_{Wasser}[mV]$ &$U_{Metall}[mV]$ &$U_{misch}[mV]$ & $T_{Wasser}[K]$ & $T_{Metall}[K]$ & $T_{misch}[K]$ \\
+\hline
+Blei & 0.89 & 4.1 & 0.95 & 295.39 & 373.10 & 296.88\\
+Blei & 1.04 & 4.1 & 1.12 & 299.11 & 373.10 & 301.09\\
+Blei & 0.83 & 4.09 & 0.91 & 293.90 & 372.68 & 295.89\\
+Aluminium & 0.95 & 4.1 & 1.04 & 296.88 & 373.10 & 299.11\\
+Aluminium & 1.12 & 4.09 & 1.22 & 301.09 & 372.86 & 303.56\\
+Aluminium & 0.90 & 4.09 & 1.01 & 295.64 & 372.86 & 298.36\\
+\hline
+\end{tabular}
+\caption{Wärmekapazität der Metalle - Messwerte}
+\end{table}
+\noindent
+Darüber hinaus wurden folgende Daten ermittelt:
+\begin{itemize}
+\item $m_{Wasser} = 0.60815 \,Kg$
+\item $m_{Blei} = 0.58765 \, Kg$
+\item $m_{Aluminium} = 0.11380 \, Kg$
+\end{itemize}
+Aus den gemessenen Werten lassen sich jetzt mit Hilfe der Formel (XYZ) alle $c_k$ errechnen:
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Material & $c_k [\frac{J}{Kg*K}]$ \\
+\hline
+Blei & $(93.1 \pm 1.0)$ \\
+Blei & $(131.1\pm1.4)$ \\
+Blei & $(123.1\pm1.3)$\\
+Aluminium & $(742\pm8)$ \\
+Aluminium & $(878\pm9)$\\
+Aluminium & $(902\pm9)$\\
+\hline
+\end{tabular}
+\caption{Wärmekapazität des Kalorimeters - Ergebnisse}
+\end{table}
+\noindent
+Die Fehler wurden jeweils mit
+\[ \Delta c_k=\frac{\partial f}{\partial c_gm_g}\Delta c_gm_g = \frac{ \left( T_{misch}-T_{Wasser} \right) }{m_{Metall} \left( T_{Metall}-T_{misch}\right)} \Delta c_gm_g\]
+berechnet, dabei steht $f$ für die Formel (XYZ).
+Die Bildung der Mittelwerte ergibt für
+\begin{itemize}
+\item Blei: $c_k = (116\pm2)\, \frac{J}{Kg*K}$
+\item Aluminium: $c_k = (841\pm15)\, \frac{J}{Kg*K}$.
+\end{itemize}
+Der Fehler des Mittelwertes wird hier errechnet mit $\Delta \overline{c_k}=\sqrt{\sum_{i}^3 \left(\frac{\Delta c_{k_i}}{3}\right)^2}$.
+\newline
+Nun soll $c_k$ umgerechnet werden in die Atomwärme $C_p$ (Atomwärme bei konstantem Druck).
+Mit Nutzung der Formel (XYZ) ergeben sich
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Material & $M\,[\frac{Kg}{Mol}]$ & $C_p \, [\frac{J}{KMol}]$\\
+\hline
+Blei & $ 0.2072 $ & $(24.0\pm0.4)$\\
+Aluminium & $ 0.0270 $ & $(22.7\pm0.4)$\\
 
-
+\hline
+\end{tabular}
+\caption{Atomwärme $C_p$ bei konstantem Druck}
+\end{table}
+\noindent
+Das eigentliche Versuchsziel ist ein Vergleich der Atomwärme bei konstantem Volumen mit dem Dulong-Petit'schen Gesetz. Um die Atomwärme bei konstantem Volumem zu erhalten, wird die Formel (XYZ) nach $C_v$ umgeformt. Für $C_v$ ergeben sich bei
+\begin{itemize}
+\item Blei: $C_v = (24.0\pm0.4)[J/(K Mol)]$
+\item Aluminium: $C_v = (22.7\pm0.4)[J/(K Mol)]$.
+\end{itemize}
+Die Fehler von $C_v$ wurden mit python uncertainties ermittelt.
+\newline
 
 \section{Diskussion}
 

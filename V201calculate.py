@@ -98,7 +98,8 @@ print m_Blei
 m_Alu=0.25430-0.1405
 print "m_Alu:"
 print m_Alu
-
+print "M WASSER"
+print 0.86993-0.26158
 print "============================="
 print "Ergebnisse:"
 
