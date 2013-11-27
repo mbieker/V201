@@ -9,9 +9,6 @@
 \usepackage{inputenc}
 \usepackage{graphicx}
 \usepackage{selinput}
-\usepackage{here}
-\usepackage{paralist}
-\usepackage{rotating} 
 \SelectInputMappings{
 adieresis={ä},
 germandbls={ß},
@@ -55,6 +52,37 @@ C = \frac{\Delta Q }{n\cdot \Delta T} =\frac{M\cdot \Delta Q}{m\cdot \Delta T} =
 Zur Messung der W\"armekapazitaeten wird ein Kalorimeter verwendet. 
 Bei dieser Apparatur handelt es sich um ein gut isoliertes Gef\"a\ss\ in dem sich eine genau bestimmte Menge Wasser der Temperatur $T_{Kalt}$ befindet. Der zu untersuchende K\"orper wird in einem Wasserbad auf eine Temperatur $T_{Heiss}$ von circa $100 ^\circ C$ erw\"armt. Danach wird dieser in das Wasser des Kalorimeters eingedaucht. Im Folgenden wid das Gef\"a\ss\ mit einem Deckel verschlossen. Die Temperatur des Systems wird mit dem Thermoelment gemssen
 \section{Auswertung}
+Zunächst wurde die Wärmekapazität $c_gm_g$ des Kalorimeters bestimmt. Dazu wurden folgende Messwerte ermittelt:
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+ $U_{kalt}[mV]$ &$U_{warm}[mV]$ &$U_{misch}[mV]$\\
+\hline
+0.85 & 4.10 & 2.06 \\
+0.91 & 4.10 & 2.13 \\
+0.90 & 4.09 & 2.12 \\
+\hline
+\end{tabular}
+\caption{Spannungen - Messwerte}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$T_{kalt}[K]$ & $T_{warm}[K]$ & $T_{misch}[K]$ & $m_{kalt}[Kg]$ & $ m_{warm} [Kg]$ \\
+\hline
+294.40 & 373.10 & 324.17 & (0.37292$\pm$0.00020) & (0.27308$\pm$0.00014)\\
+295.89 & 373.10 & 325.87 & (0.37441$\pm$0.00020) & (0.27173$\pm$0.00014)\\
+295.64 & 372.86 & 325.63 & (0.37300$\pm$0.00020) & (0.27305$\pm$0.00014)\\
+\hline
+\end{tabular}
+\caption{Wärmekapazität des Kalorimeters - Messwerte}
+\end{table}
+
+
 
 \section{Diskussion}
 
